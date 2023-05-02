@@ -1,11 +1,10 @@
-import Header from '@/components/Layout/Header';
 import styled from 'styled-components';
 import Link from 'next/link';
 
 const StyledDiv = styled.div`
   background-color: #fff;
   height: 100vh;
-  width: 100vw;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +20,6 @@ const StyledLink = styled.a`
 export default function Home() {
   return (
     <>
-      <Header />
       <StyledDiv>
         <h1 style={{color: '#FF5500'}}>Welcome to MofMof Website!</h1>
         <Link href="/FattailGecko" legacyBehavior>

@@ -2,16 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
-  background-color: blue;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  height: 80px;
+  border-bottom: 2px solid #ff5500;
 `;
 
 const Logo = styled.div`
-  font-size: 24px;
-  font-weight: bold;
+  background-image: url('/mofmof2.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 130px;
+  height: 30px;
 `;
 
 const NavWrapper = styled.div`
@@ -39,7 +44,7 @@ const NavItem = styled.div`
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo>Logo</Logo>
+      <Logo />
       <NavWrapper>
         <NavItem>모프계산기</NavItem>
         <NavItem>모프소개</NavItem>

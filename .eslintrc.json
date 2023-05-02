@@ -18,5 +18,13 @@
     "next",
     "next/core-web-vitals",
     "plugin:prettier/recommended" //항상 마지막에
-  ]
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto" //CRLF, LF
+      }
+    ]
+  }
 }
