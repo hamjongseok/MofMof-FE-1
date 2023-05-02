@@ -47,7 +47,7 @@ const Header = () => {
       <Logo />
       <NavWrapper>
         <NavItem>모프계산기</NavItem>
-        <NavItem>모프소개</NavItem>
+        <NavItem>모프소</NavItem>
         <NavItem>로그인</NavItem>
       </NavWrapper>
     </HeaderWrapper>
