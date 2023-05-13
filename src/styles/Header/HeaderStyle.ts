@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   align-items: center;
   padding: 30px;
@@ -27,7 +27,7 @@ export const LogoBox = styled.div`
 `;
 
 export const LoginBox = styled.div`
-  color: #fff;
+  color: ${(props) => props.theme.colors.primary};
   margin-right: 20px;
   /* height: 50px; */
   display: flex;
@@ -40,9 +40,9 @@ export const LoginBox = styled.div`
 export const LoginBtn = styled.a`
   font-size: 16px;
   height: 17px;
-  color: #ff5500;
+  color: ${(props) => props.theme.colors.primary};
   padding: 18px 20px;
-  border: 1px solid #ff5500;
+  border: 1px solid ${(props) => props.theme.colors.primaryColor};
   border-radius: 4px;
   line-height: 5px;
 
@@ -52,7 +52,7 @@ export const LoginBtn = styled.a`
 `;
 
 export const SignUpBtn = styled.div`
-  background-color: #ff5500;
+  background-color: ${(props) => props.theme.colors.primaryColor};
   color: #fff;
   padding: 0 18px;
   font-size: 16px;

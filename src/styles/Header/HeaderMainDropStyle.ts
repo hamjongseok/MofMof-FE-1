@@ -12,7 +12,7 @@ const fadeInDown = keyframes`
 `;
 
 export const MainDropdownWrapper = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   position: absolute;
   width: 300px;
   height: auto;
@@ -27,7 +27,7 @@ export const MainDropdownWrapper = styled.div`
 `;
 
 export const DropContentsWrapper = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.primary};
   width: auto;
   height: auto;
   text-align: left;
