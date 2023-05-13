@@ -21,7 +21,7 @@ export const DoubleDropLi = styled.li`
   margin-right: ${(props) => props.theme.spacing.base};
   padding: 3px 20px;
   &:hover {
-    background-color: ${(props) => props.theme.colors.gray};
+    background-color: ${(props) => props.theme.colors.gray100};
     cursor: pointer;
   }
 `;
