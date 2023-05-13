@@ -1,7 +1,7 @@
 import {Provider} from 'react-redux';
 import type {AppProps} from 'next/app';
 import store from '@/store/store';
-import Header from '@/components/Layout/Header';
+import Header from '@/components/Layout/Header/Header';
 import {GlobalStyle} from '@/styles/globalStyle';
 import Container from '@/components/Container';
 
