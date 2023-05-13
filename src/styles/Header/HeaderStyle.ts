@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {media} from '../theme';
 
 export const HeaderWrapper = styled.header`
   background-color: ${(props) => props.theme.colors.primary};
@@ -32,13 +33,16 @@ export const LoginBox = styled.div`
   /* height: 50px; */
   display: flex;
   align-items: center;
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
+    display: none;
+  } */
+  ${media('lg')} {
     display: none;
   }
 `;
 
 export const LoginBtn = styled.a`
-  font-size: 16px;
+  font-size: ${(props) => props.theme.text.base};
   height: 17px;
   color: ${(props) => props.theme.colors.primary};
   padding: 18px 20px;
@@ -53,9 +57,9 @@ export const LoginBtn = styled.a`
 
 export const SignUpBtn = styled.div`
   background-color: ${(props) => props.theme.colors.primaryColor};
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   padding: 0 18px;
-  font-size: 16px;
+  font-size: ${(props) => props.theme.text.base};
   line-height: 38px;
   border-radius: 4px;
   margin-right: 10px;

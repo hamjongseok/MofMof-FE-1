@@ -13,12 +13,12 @@ export const DoubleDropUl = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: ${(props) => props.theme.text.sm};
 `;
 
 export const DoubleDropLi = styled.li`
   list-style-type: none;
-  margin-right: 25px;
+  margin-right: ${(props) => props.theme.spacing.base};
   padding: 3px 20px;
   &:hover {
     background-color: ${(props) => props.theme.colors.gray};

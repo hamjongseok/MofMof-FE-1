@@ -5,7 +5,7 @@ import Header from '@/components/Layout/Header/Header';
 import {GlobalStyle} from '@/styles/globalStyle';
 import Container from '@/components/Container';
 import {ThemeProvider} from 'styled-components';
-import theme from '@/styles/theme';
+import theme from '@/styles/theme/theme';
 
 export default function App({Component, pageProps}: AppProps) {
   return (

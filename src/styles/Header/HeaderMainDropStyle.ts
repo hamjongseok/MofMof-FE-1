@@ -14,10 +14,10 @@ const fadeInDown = keyframes`
 export const MainDropdownWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   position: absolute;
-  width: 300px;
+  width: ${(props) => props.theme.sizes.dropdown};
   height: auto;
-  padding: 20px 16px 16px;
-  border-radius: 12px;
+  padding: 20px 16px 16px; //theme추가 여부 확인
+  border-radius: ${(props) => props.theme.borderRadius.md};
   top: 50px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
   display: flex;
@@ -35,7 +35,7 @@ export const DropContentsWrapper = styled.div`
 
 export const ContentTitle = styled.span`
   font-size: 15px;
-  color: #9aa3a3;
+  color: ${(props) => props.theme.colors.gray200};
   font-weight: 400;
   margin: 0 0 6px 10px;
 `;
@@ -50,14 +50,14 @@ export const ContentLi = styled.li`
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  width: 270px;
+  width: ${(props) => props.theme.sizes.xs};
   height: auto;
   padding: 0;
   align-items: center;
   gap: 15px;
   position: relative;
   &:hover {
-    background-color: #f2f3f5;
+    background-color: ${(props) => props.theme.colors.gray100};
   }
   &:hover > div {
     visibility: visible;
