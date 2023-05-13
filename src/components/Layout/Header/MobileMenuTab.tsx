@@ -1,4 +1,4 @@
-import * as M from '@/styles/MobileMenuTabStyle';
+import * as M from '@/styles/Header/MobileMenuTabStyle';
 import Image from 'next/image';
 
 export const MobileMenuTab = () => {

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import * as M from '@/styles/HeaderStyle';
+import * as M from '@/styles/Header/HeaderStyle';
 import {HeaderMainDropdown} from '@/components/Layout/Header/HeaderMainDropdown';
 import {HeaderCalcDropdown} from '@/components/Layout/Header/HeaderCalcDropdown';
 import {HeaderIntroDropdown} from '@/components/Layout/Header/HeaderIntroDropdown';

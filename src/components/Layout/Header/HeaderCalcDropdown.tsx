@@ -1,4 +1,4 @@
-import * as M from '@/styles/HeaderMainDropStyle';
+import * as M from '@/styles/Header/HeaderMainDropStyle';
 import Link from 'next/link';
 import Image from 'next/image';
 

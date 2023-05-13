@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import * as M from '@/styles/HeaderMainDropStyle';
+import * as M from '@/styles/Header/HeaderMainDropStyle';
 import React from 'react';
 
 export const HeaderMainDropdown = ({

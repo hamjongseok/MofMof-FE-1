@@ -1,4 +1,4 @@
-import * as M from '@/styles/DoubleDropdownStyle';
+import * as M from '@/styles/Header/DoubleDropdownStyle';
 
 export const DoubleDropdown = ({
   onMouseEnter,
