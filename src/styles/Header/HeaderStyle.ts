@@ -9,8 +9,12 @@ export const HeaderWrapper = styled.header`
   height: 64px;
   flex-grow: 1;
   justify-content: space-between;
+  position: relative; // 추가된 코드
 
   /* border-bottom: 1px solid #000; */
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 `;
 
 export const MainMenuAndUserBoxWrapper = styled.div`
@@ -36,9 +40,6 @@ export const LoginBox = styled.div`
   /* @media (max-width: 1024px) {
     display: none;
   } */
-  ${media('lg')} {
-    display: none;
-  }
 `;
 
 export const LoginBtn = styled.a`
@@ -63,9 +64,7 @@ export const SignUpBtn = styled.div`
   line-height: 38px;
   border-radius: 4px;
   margin-right: 10px;
-  @media (max-width: 1024px) {
-    display: none;
-  }
+
   &:hover {
     cursor: pointer;
   }
@@ -73,21 +72,24 @@ export const SignUpBtn = styled.div`
 
 export const UserBox = styled.div`
   display: flex;
+  ${media('tablet')} {
+    display: none;
+  }
 `;
 
 export const MenuBox = styled.div`
   width: 24px;
   height: 50px;
   display: none;
-  @media (max-width: 1023px) {
+  ${media('tablet')} {
     display: block;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    &:hover {
-      cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
   }
 `;
 export const UserBoxWrapper = styled.div`
@@ -99,11 +101,11 @@ export const UserBoxWrapper = styled.div`
 
 export const MainMenuBox = styled.div`
   margin-right: 24px;
-  display: none;
-  @media (min-width: 1024px) {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  ${media('desktop')} {
+    display: none;
   }
 `;
 

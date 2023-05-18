@@ -9,6 +9,7 @@ import {HeaderBoardDropdown} from '@/components/Layout/Header/HeaderBoardDropdow
 import {MobileMenuTab} from './MobileMenuTab';
 
 import {useState} from 'react';
+import Button from '@/components/UI/Button';
 
 type HoverState = {
   calculator: boolean;
@@ -29,7 +30,7 @@ const Header = () => {
     <M.HeaderWrapper>
       <M.MainMenuAndUserBoxWrapper>
         <M.LogoBox>
-          <Link href={'/'} legacyBehavior>
+          <Link href={'/'}>
             <Image
               src={'/mofmof2.svg'}
               alt="헤더 로고"
@@ -139,10 +140,10 @@ const Header = () => {
         <M.UserBox>
           <M.LoginBox>
             <Link href={'/'} legacyBehavior>
-              <M.LoginBtn>Log in</M.LoginBtn>
+              <Button isSecondary={true}> Login </Button>
             </Link>
           </M.LoginBox>
-          <M.SignUpBtn>Sign up</M.SignUpBtn>
+          <Button>Sign up</Button>
         </M.UserBox>
         <M.MenuBox onClick={() => setShowMobileMenu(true)}>
           <Image

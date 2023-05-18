@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import Button from '@/components/Button';
+import Button from '@/components/UI/Button';
 
 const StyledDiv = styled.div`
   background-color: #fff;
@@ -27,8 +27,6 @@ export default function Home() {
           <StyledLink>펫테일</StyledLink>
         </Link>
       </StyledDiv>
-      <Button>primary</Button>
-      <Button isSecondary={true}>secondary</Button>
     </>
   );
 }

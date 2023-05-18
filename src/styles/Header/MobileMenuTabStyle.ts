@@ -11,6 +11,8 @@ export const MobileMenuWrapper = styled.div`
   position: fixed;
   height: 100vh;
   border: 1px solid #000;
+  right: 0;
+  top: 0;
 `;
 
 export const MobileMenuHeader = styled.header`
