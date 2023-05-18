@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const MobileMenuExitCon = styled.div`
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 998;
+  height: 100%;
+  background-color: rebeccapurple;
+`;
+
 export const MobileMenuWrapper = styled.div`
   width: 300px;
   background-color: #fff;

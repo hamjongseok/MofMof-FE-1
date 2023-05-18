@@ -153,7 +153,9 @@ const Header = () => {
             height={24}
           />
         </M.MenuBox>
-        {showMobileMenu && <MobileMenuTab />}
+        {showMobileMenu && (
+          <MobileMenuTab setshowMobileMenu={setShowMobileMenu} />
+        )}
       </M.UserBoxWrapper>
     </M.HeaderWrapper>
   );
