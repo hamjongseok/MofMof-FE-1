@@ -139,7 +139,7 @@ const Header = () => {
       <M.UserBoxWrapper>
         <M.UserBox>
           <M.LoginBox>
-            <Link href={'/'} legacyBehavior>
+            <Link href={'/'}>
               <Button isSecondary={true}> Login </Button>
             </Link>
           </M.LoginBox>

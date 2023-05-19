@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.header`
 
   /* border-bottom: 1px solid #000; */
   @media (max-width: 768px) {
-    padding: 0 15px;
+    padding: 0 20px 0 20px;
   }
 `;
 

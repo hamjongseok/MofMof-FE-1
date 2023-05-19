@@ -1,20 +1,9 @@
 import styled from 'styled-components';
 
-export const MobileMenuExitCon = styled.div`
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  z-index: 998;
-  height: 100%;
-  background-color: rebeccapurple;
-`;
-
 export const MobileMenuWrapper = styled.div`
   width: 300px;
   background-color: #fff;
-  padding: 0;
+  padding: 0 20px;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -28,23 +17,29 @@ export const MobileMenuWrapper = styled.div`
 
 export const MobileMenuHeader = styled.header`
   /* background-color: orange; */
-  height: 30px;
+  height: 52px;
   width: 100%;
   z-index: 100;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 export const MobileMenuHeaderBtn = styled.button`
   background-image: url('/X.svg');
-  background-size: 100%;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 5px;
-  right: 20px;
-  background-color: transparent;
+
+  /* background-color: red; */
+  background-size: 20px 30px;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
   border: none;
-  padding: 0;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const MobileMenuContentDiv = styled.div`
@@ -55,14 +50,19 @@ export const MobileMenuContentDiv = styled.div`
 
 export const MobileMenuUserDiv = styled.div`
   width: 100%;
-  height: 20px;
-  background-color: purple;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 `;
 
 export const MobileMenuDropdownDiv = styled.div`
   width: 100%;
-  height: 20px;
-  background-color: red;
+  height: 300px;
+  background-color: gray;
 `;
 
 export const MobileMenuFooterDiv = styled.div`
@@ -72,30 +72,37 @@ export const MobileMenuFooterDiv = styled.div`
 `;
 
 export const LoginBtn = styled.a`
-  font-size: 16px;
-  height: 17px;
-  color: #ff5500;
-  padding: 18px 20px;
-  border: 1px solid #ff5500;
-  border-radius: 4px;
-  line-height: 5px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${(props) => props.theme.text.base};
+  line-height: ${(props) => props.theme.spacing.sm};
+  padding: 1.3rem 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.primaryColor};
+  border: 1px solid ${(props) => props.theme.colors.primaryColor};
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
 `;
 
 export const SignUpBtn = styled.div`
-  background-color: #ff5500;
-  color: #fff;
-  padding: 0 18px;
-  font-size: 16px;
-  line-height: 38px;
-  border-radius: 4px;
-  margin-right: 10px;
-  @media (max-width: 1024px) {
-    display: none;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${(props) => props.theme.text.base};
+  line-height: ${(props) => props.theme.spacing.sm};
+  padding: 1.3rem 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: ${(props) => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.colors.white};
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
+
   &:hover {
     cursor: pointer;
   }
