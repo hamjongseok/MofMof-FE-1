@@ -50,6 +50,22 @@ export const MobileMenuContentDiv = styled.div`
   background-color: red;
 `;
 
+export const SubToggleIcon = styled.div`
+  /* width: 100px; */
+  height: 10px;
+  padding: 20px 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10;
+
+  & > img {
+    margin-left: 10px; // 아이콘의 왼쪽 여백을 조절합니다.
+  }
+`;
+
 export const MobileMenuUserDiv = styled.div`
   width: 100%;
   height: 100px;
@@ -63,11 +79,10 @@ export const MobileMenuUserDiv = styled.div`
 
 export const MobileMenuDropdownDiv = styled.div`
   width: 100%;
-  height: 180px;
   padding: 30px 0;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 5px;
   border-bottom: 1px solid ${(props) => props.theme.colors.primaryColor};
 `;
 
