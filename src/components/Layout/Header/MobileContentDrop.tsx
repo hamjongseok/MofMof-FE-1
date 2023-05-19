@@ -14,11 +14,16 @@ export const MobileContentDrop = () => {
     introduction: false,
     board: false,
   });
+  console.log(hover.calculator);
   return (
     <>
       <M.SubToggleIcon
-        onMouseEnter={() => setHover({...hover, calculator: true})}
-        onMouseLeave={() => setHover({...hover, calculator: false})}
+        onClick={() =>
+          setHover((prevHover) => ({
+            ...prevHover,
+            calculator: !prevHover.calculator,
+          }))
+        }
       >
         모프 계산기
         <Image
@@ -29,8 +34,12 @@ export const MobileContentDrop = () => {
         />
       </M.SubToggleIcon>
       <M.SubToggleIcon
-        onMouseEnter={() => setHover({...hover, introduction: true})}
-        onMouseLeave={() => setHover({...hover, introduction: false})}
+        onClick={() =>
+          setHover((prevHover) => ({
+            ...prevHover,
+            introduction: !prevHover.introduction,
+          }))
+        }
       >
         모프 소개
         <Image
@@ -41,8 +50,12 @@ export const MobileContentDrop = () => {
         />
       </M.SubToggleIcon>
       <M.SubToggleIcon
-        onMouseEnter={() => setHover({...hover, board: true})}
-        onMouseLeave={() => setHover({...hover, board: false})}
+        onClick={() =>
+          setHover((prevHover) => ({
+            ...prevHover,
+            board: !prevHover.board,
+          }))
+        }
       >
         게시판
         <Image
