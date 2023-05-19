@@ -29,8 +29,10 @@ export const MobileMenuHeaderBtn = styled.button`
   background-image: url('/X.svg');
 
   /* background-color: red; */
-  background-size: 20px 30px;
+  background-size: 30px 20px;
   background-repeat: no-repeat;
+  background-position: right;
+
   margin-top: 10px;
 
   background-color: #fff;
@@ -61,14 +63,19 @@ export const MobileMenuUserDiv = styled.div`
 
 export const MobileMenuDropdownDiv = styled.div`
   width: 100%;
-  height: 300px;
-  background-color: gray;
+  height: 180px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primaryColor};
 `;
 
 export const MobileMenuFooterDiv = styled.div`
   width: 100%;
   height: 20px;
   background-color: #000;
+  margin-top: 20px;
 `;
 
 export const LoginBtn = styled.a`
