@@ -16,7 +16,10 @@ export const MobileMenuTab: React.FC<MobileMenuTabProps> = ({
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setshowMobileMenu(false);
+        setTimeout(() => {
+          setshowMobileMenu(false);
+        }, 300);
+        setIsFadeOut(true);
       }
     };
 
