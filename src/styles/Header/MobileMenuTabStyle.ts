@@ -1,6 +1,28 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 
-export const MobileMenuWrapper = styled.div`
+interface MobileMenuWrapperProps {
+  fadeOut: boolean;
+}
+
+const fadeInDown = keyframes`
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+		transform: translate(0); 
+		 }
+`;
+
+const fadeOutUp = keyframes`
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(100%);
+  }
+`;
+
+export const MobileMenuWrapper = styled.div<MobileMenuWrapperProps>`
   width: 300px;
   background-color: #fff;
   padding: 0 20px;
@@ -10,9 +32,31 @@ export const MobileMenuWrapper = styled.div`
   margin: 0;
   position: fixed;
   height: 100vh;
-  border: 1px solid #000;
+  border: 0.3px solid #000;
   right: 0;
   top: 0;
+  animation: ${(props) =>
+    props.fadeOut
+      ? css`
+          ${fadeOutUp} 0.5s 1ms
+        `
+      : css`
+          ${fadeInDown} 0.5s 1ms
+        `};
+`;
+
+export const MobileOverlay = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  z-index: 998;
+  padding: 0;
+  margin: 0;
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const MobileMenuHeader = styled.header`

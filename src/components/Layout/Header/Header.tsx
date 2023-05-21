@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Image from 'next/image';
 import * as M from '@/styles/Header/HeaderStyle';
 import {HeaderMainDropdown} from '@/components/Layout/Header/HeaderMainDropdown';
@@ -25,6 +25,14 @@ const Header = () => {
     board: true,
   });
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (showMobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [showMobileMenu]);
 
   return (
     <M.HeaderWrapper>

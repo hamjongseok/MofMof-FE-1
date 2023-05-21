@@ -1,6 +1,6 @@
 import Button from '@/components/UI/Button';
 import * as M from '@/styles/Header/MobileMenuTabStyle';
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {MobileContentDrop} from './MobileContentDrop';
 
 type MobileMenuTabProps = {
@@ -11,6 +11,7 @@ export const MobileMenuTab: React.FC<MobileMenuTabProps> = ({
   setshowMobileMenu,
 }) => {
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const [isFadeOut, setIsFadeOut] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -27,21 +28,28 @@ export const MobileMenuTab: React.FC<MobileMenuTabProps> = ({
 
   return (
     <>
-      <M.MobileMenuWrapper ref={menuRef}>
-        <M.MobileMenuHeader>
-          <M.MobileMenuHeaderBtn
-            onClick={() => setshowMobileMenu(false)}
-          ></M.MobileMenuHeaderBtn>
-        </M.MobileMenuHeader>
-        <M.MobileMenuUserDiv>
-          <M.LoginBtn>Login</M.LoginBtn>
-          <M.SignUpBtn>Sign up</M.SignUpBtn>
-        </M.MobileMenuUserDiv>
-        <M.MobileMenuDropdownDiv>
-          <MobileContentDrop></MobileContentDrop>
-        </M.MobileMenuDropdownDiv>
-        <M.MobileMenuFooterDiv></M.MobileMenuFooterDiv>
-      </M.MobileMenuWrapper>
+      <M.MobileOverlay>
+        <M.MobileMenuWrapper ref={menuRef} fadeOut={isFadeOut}>
+          <M.MobileMenuHeader>
+            <M.MobileMenuHeaderBtn
+              onClick={() => {
+                setIsFadeOut(true);
+                setTimeout(() => {
+                  setshowMobileMenu(false);
+                }, 300);
+              }}
+            ></M.MobileMenuHeaderBtn>
+          </M.MobileMenuHeader>
+          <M.MobileMenuUserDiv>
+            <M.LoginBtn>Login</M.LoginBtn>
+            <M.SignUpBtn>Sign up</M.SignUpBtn>
+          </M.MobileMenuUserDiv>
+          <M.MobileMenuDropdownDiv>
+            <MobileContentDrop></MobileContentDrop>
+          </M.MobileMenuDropdownDiv>
+          <M.MobileMenuFooterDiv></M.MobileMenuFooterDiv>
+        </M.MobileMenuWrapper>
+      </M.MobileOverlay>
     </>
   );
 };
