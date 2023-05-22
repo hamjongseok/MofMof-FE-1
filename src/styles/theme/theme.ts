@@ -34,11 +34,9 @@ const theme = {
     dropdown: '18.75rem', // 300px
   },
   breakpoints: {
-    xs: '320px',
-    sm: '480px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
+    mobile: '360px',
+    tablet: '768px',
+    desktop: '1024px',
   },
   containerWidth: '64rem', // 1024px
   fonts: {},

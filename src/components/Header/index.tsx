@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Image from 'next/image';
 import * as M from '@/styles/Header/HeaderStyle';
-import {HeaderMainDropdown} from '@/components/Layout/Header/HeaderMainDropdown';
-import {HeaderCalcDropdown} from '@/components/Layout/Header/HeaderCalcDropdown';
-import {HeaderIntroDropdown} from '@/components/Layout/Header/HeaderIntroDropdown';
-import {HeaderBoardDropdown} from '@/components/Layout/Header/HeaderBoardDropdown';
+import {HeaderMainDropdown} from '@/components/Header/HeaderMainDropdown';
+import {HeaderCalcDropdown} from '@/components/Header/HeaderCalcDropdown';
+import {HeaderIntroDropdown} from '@/components/Header/HeaderIntroDropdown';
+import {HeaderBoardDropdown} from '@/components/Header/HeaderBoardDropdown';
 import {MobileMenuTab} from './MobileMenuTab';
 
 import {useState} from 'react';
+import Button from '@/components/UI/Button';
 
 type HoverState = {
   calculator: boolean;
@@ -25,11 +26,19 @@ const Header = () => {
   });
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (showMobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [showMobileMenu]);
+
   return (
     <M.HeaderWrapper>
       <M.MainMenuAndUserBoxWrapper>
         <M.LogoBox>
-          <Link href={'/'} legacyBehavior>
+          <Link href={'/'}>
             <Image
               src={'/mofmof2.svg'}
               alt="헤더 로고"
@@ -138,11 +147,11 @@ const Header = () => {
       <M.UserBoxWrapper>
         <M.UserBox>
           <M.LoginBox>
-            <Link href={'/'} legacyBehavior>
-              <M.LoginBtn>Log in</M.LoginBtn>
+            <Link href={'/'}>
+              <Button isSecondary={true}> Login </Button>
             </Link>
           </M.LoginBox>
-          <M.SignUpBtn>Sign up</M.SignUpBtn>
+          <Button>Sign up</Button>
         </M.UserBox>
         <M.MenuBox onClick={() => setShowMobileMenu(true)}>
           <Image
@@ -152,7 +161,9 @@ const Header = () => {
             height={24}
           />
         </M.MenuBox>
-        {showMobileMenu && <MobileMenuTab />}
+        {showMobileMenu && (
+          <MobileMenuTab setshowMobileMenu={setShowMobileMenu} />
+        )}
       </M.UserBoxWrapper>
     </M.HeaderWrapper>
   );

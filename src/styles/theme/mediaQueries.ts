@@ -1,6 +1,6 @@
 import theme from './theme';
 
-export type Breakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+type Breakpoints = 'mobile' | 'tablet' | 'desktop';
 
 export const media = (breakpoint: Breakpoints) => {
   return `@media (max-width: ${theme.breakpoints[breakpoint]})`;
