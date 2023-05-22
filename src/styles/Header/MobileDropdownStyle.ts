@@ -1,10 +1,23 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const slideDown = keyframes`
+	0% {
+		transform: translateY(-30%);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+`;
 
 export const DropdownCon = styled.div`
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
+  animation: ${slideDown} 0.3s linear;
+  position: relative;
 `;
 
 export const DropdownUl = styled.ul`

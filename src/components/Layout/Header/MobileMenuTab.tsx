@@ -11,7 +11,7 @@ export const MobileMenuTab: React.FC<MobileMenuTabProps> = ({
   setshowMobileMenu,
 }) => {
   const menuRef = useRef<HTMLDivElement | null>(null);
-  const [isFadeOut, setIsFadeOut] = useState(false);
+  const [isSlideOut, setIsSlideOut] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -19,7 +19,7 @@ export const MobileMenuTab: React.FC<MobileMenuTabProps> = ({
         setTimeout(() => {
           setshowMobileMenu(false);
         }, 300);
-        setIsFadeOut(true);
+        setIsSlideOut(true);
       }
     };
 
@@ -32,11 +32,11 @@ export const MobileMenuTab: React.FC<MobileMenuTabProps> = ({
   return (
     <>
       <M.MobileOverlay>
-        <M.MobileMenuWrapper ref={menuRef} fadeOut={isFadeOut}>
+        <M.MobileMenuWrapper ref={menuRef} fadeOut={isSlideOut}>
           <M.MobileMenuHeader>
             <M.MobileMenuHeaderBtn
               onClick={() => {
-                setIsFadeOut(true);
+                setIsSlideOut(true);
                 setTimeout(() => {
                   setshowMobileMenu(false);
                 }, 300);

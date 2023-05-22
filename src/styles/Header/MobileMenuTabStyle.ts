@@ -4,21 +4,21 @@ interface MobileMenuWrapperProps {
   fadeOut: boolean;
 }
 
-const fadeInDown = keyframes`
+const slideIn = keyframes`
   0% {
-    transform: translate(100%);
+    transform: translateX(100%);
   }
   100% {
-		transform: translate(0); 
+		transform: translateX(0); 
 		 }
 `;
 
-const fadeOutUp = keyframes`
+const slideOut = keyframes`
   0% {
-    transform: translate(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate(100%);
+    transform: translateX(100%);
   }
 `;
 
@@ -38,10 +38,10 @@ export const MobileMenuWrapper = styled.div<MobileMenuWrapperProps>`
   animation: ${(props) =>
     props.fadeOut
       ? css`
-          ${fadeOutUp} 0.5s 1ms
+          ${slideOut} 0.5s
         `
       : css`
-          ${fadeInDown} 0.5s 1ms
+          ${slideIn} 0.5s
         `};
 `;
 
