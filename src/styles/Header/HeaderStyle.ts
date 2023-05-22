@@ -7,8 +7,8 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   padding: 30px;
   height: 64px;
-  flex-grow: 1;
   justify-content: space-between;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   position: relative; // 추가된 코드
 
   /* border-bottom: 1px solid #000; */
