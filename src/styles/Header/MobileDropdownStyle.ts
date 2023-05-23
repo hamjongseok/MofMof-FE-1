@@ -1,4 +1,8 @@
-import styled, {keyframes} from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
+
+// interface mobileDropdown {
+//   mobileDropdown: string | null;
+// }
 
 const slideDown = keyframes`
 	0% {
@@ -11,12 +15,22 @@ const slideDown = keyframes`
 	}
 `;
 
+const slideUp = keyframes`
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+`;
+
 export const DropdownCon = styled.div`
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  animation: ${slideDown} 0.3s linear;
   position: relative;
 `;
 
@@ -33,4 +47,8 @@ export const DropdownLi = styled.li`
     background-color: ${(props) => props.theme.colors.gray100};
     cursor: pointer;
   }
+`;
+
+export const DropdownA = styled.a`
+  border-style: none;
 `;
