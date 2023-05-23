@@ -10,6 +10,7 @@ export const StyledButton = styled.button<{isSecondary?: boolean}>`
   background-color: ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
+  white-space: nowrap;
 
   ${(props) =>
     props.isSecondary &&
