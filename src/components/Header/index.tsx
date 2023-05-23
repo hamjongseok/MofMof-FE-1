@@ -63,6 +63,9 @@ const Header = () => {
             onMouseLeave={() => {
               setActiveMenuItem(null), setHover({...hover, calculator: true});
             }}
+            onFocus={() => {
+              setActiveMenuItem('calculator');
+            }}
           />
         )}
         {activeMenuItem === 'introduction' && (
@@ -89,57 +92,87 @@ const Header = () => {
         <M.HeaderReptileIcon
           onMouseEnter={() => setActiveMenuItem('main')}
           onMouseLeave={() => setActiveMenuItem(null)}
+          onFocus={() => {
+            setActiveMenuItem('main');
+          }}
+          onBlur={() => {
+            setActiveMenuItem(null);
+          }}
         ></M.HeaderReptileIcon>
 
         <M.SubNavCon>
-          <M.SubNavList
-            onMouseEnter={() => {
-              setActiveMenuItem('calculator');
-              setHover({...hover, calculator: false});
-            }}
-            onMouseLeave={() => {
-              // setActiveMenuItem(null);
-              setHover({...hover, calculator: true});
-            }}
-          >
-            모프 계산기
-            <Image
-              src={hover.calculator ? '/그레이세모2.svg' : '/세모.svg'}
-              alt="메뉴 아이콘"
-              width={14}
-              height={14}
-            />
-          </M.SubNavList>
-          <M.SubNavList
+          <M.SubNavLi>
+            <M.SubNavButton
+              onMouseEnter={() => {
+                setActiveMenuItem('calculator');
+                setHover({...hover, calculator: false});
+              }}
+              onMouseLeave={() => {
+                // setActiveMenuItem(null);
+                setHover({...hover, calculator: true});
+              }}
+              onFocus={() => {
+                setActiveMenuItem('calculator');
+              }}
+              onBlur={() => {
+                setActiveMenuItem(null);
+              }}
+            >
+              모프 계산기
+              <Image
+                src={hover.calculator ? '/그레이세모2.svg' : '/세모.svg'}
+                alt="메뉴 아이콘"
+                width={14}
+                height={14}
+              />
+            </M.SubNavButton>
+          </M.SubNavLi>
+          <M.SubNavLi
             onMouseEnter={() => {
               setActiveMenuItem('introduction');
               setHover({...hover, introduction: false});
             }}
             onMouseLeave={() => setHover({...hover, introduction: true})}
-          >
-            모프 소개
-            <Image
-              src={hover.introduction ? '/그레이세모2.svg' : '/세모.svg'}
-              alt="메뉴 아이콘"
-              width={14}
-              height={14}
-            />
-          </M.SubNavList>
-          <M.SubNavList
-            onMouseEnter={() => {
-              setActiveMenuItem('board');
-              setHover({...hover, board: false});
+            onFocus={() => {
+              setActiveMenuItem('introduction');
             }}
-            onMouseLeave={() => setHover({...hover, board: true})}
+            onBlur={() => {
+              setActiveMenuItem(null);
+            }}
           >
-            게시판
-            <Image
-              src={hover.board ? '/그레이세모2.svg' : '/세모.svg'}
-              alt="메뉴 아이콘"
-              width={14}
-              height={14}
-            />
-          </M.SubNavList>
+            <M.SubNavButton>
+              모프 소개
+              <Image
+                src={hover.introduction ? '/그레이세모2.svg' : '/세모.svg'}
+                alt="메뉴 아이콘"
+                width={14}
+                height={14}
+              />
+            </M.SubNavButton>
+          </M.SubNavLi>
+          <M.SubNavLi>
+            <M.SubNavButton
+              onMouseEnter={() => {
+                setActiveMenuItem('board');
+                setHover({...hover, board: false});
+              }}
+              onMouseLeave={() => setHover({...hover, board: true})}
+              onFocus={() => {
+                setActiveMenuItem('board');
+              }}
+              onBlur={() => {
+                setActiveMenuItem(null);
+              }}
+            >
+              게시판
+              <Image
+                src={hover.board ? '/그레이세모2.svg' : '/세모.svg'}
+                alt="메뉴 아이콘"
+                width={14}
+                height={14}
+              />
+            </M.SubNavButton>
+          </M.SubNavLi>
         </M.SubNavCon>
       </M.HeaderNavCon>
       {/* </M.HeaderLogoNavCon> */}

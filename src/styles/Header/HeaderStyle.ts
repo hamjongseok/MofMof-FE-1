@@ -71,14 +71,22 @@ export const SubNavCon = styled.ul`
   align-items: center;
 `;
 
-export const SubNavList = styled.li`
-  height: 10px;
-  font-weight: 500;
+export const SubNavLi = styled.li`
+  list-style: none;
+  /* height: 10px; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* padding: 10px 0; */
+`;
+
+export const SubNavButton = styled.button`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-style: none;
+  font-weight: 500;
+  background-color: transparent;
+  font-size: 15px;
   cursor: pointer;
-  padding: 10;
 
   & > img {
     margin-left: 10px; // 아이콘의 왼쪽 여백을 조절합니다.

@@ -5,16 +5,20 @@ import Image from 'next/image';
 export const HeaderCalcDropdown = ({
   onMouseEnter,
   onMouseLeave,
-}: {
+  onFocus,
+}: // onBlur,
+{
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  onFocus: () => void;
+  // onBlur: () => void;
 }) => {
   return (
     <>
       <M.MainDropdownWrapper
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        style={{position: 'absolute', left: '220px'}}
+        style={{position: 'absolute', left: '200px'}}
       >
         <M.DropContentsWrapper>
           <M.ContentTitle>Calculator</M.ContentTitle>
