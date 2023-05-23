@@ -1,15 +1,52 @@
 import * as M from '@/styles/Header/MobileMenuTabStyle';
 import Image from 'next/image';
 import {useState} from 'react';
-import {MobileCalcDropdown} from './MobileCalcDropdown';
-import {MobileIntroDropdown} from './MobileIntroDropdown';
-import {MobileBoardDropdown} from './MobileBoardDropdown';
+import {MobileDropdown} from './MobileDropdown';
 
-// type HoverState = {
-//   calculator: boolean;
-//   introduction: boolean;
-//   board: boolean;
-// };
+const DropdownComponents = {
+  calculator: [
+    {
+      title: '펫테일 게코',
+      linkURL: '/',
+    },
+    {
+      title: '크레스티드 게코',
+      linkURL: '/',
+    },
+    {
+      title: '레오파드 게코',
+      linkURL: '/',
+    },
+  ],
+  introduction: [
+    {
+      title: '펫테일 게코',
+      linkURL: '/',
+    },
+    {
+      title: '크레스티드 게코',
+      linkURL: '/',
+    },
+    {
+      title: '레오파드 게코',
+      linkURL: '/',
+    },
+  ],
+  board: [
+    {
+      title: '펫테일 게코',
+      linkURL: '/',
+    },
+    {
+      title: '크레스티드 게코',
+      linkURL: '/',
+    },
+    {
+      title: '레오파드 게코',
+      linkURL: '/',
+    },
+  ],
+};
 
 export const MobileContentDrop = () => {
   const [hover, setHover] = useState<string | null>(null);
@@ -20,6 +57,7 @@ export const MobileContentDrop = () => {
     setMobileDropdown((mobileDropdown) =>
       mobileDropdown === string ? null : string,
     );
+    console.log('처음', mobileDropdown);
     setHover((hover) => (hover === string ? null : string));
   };
 
@@ -39,7 +77,7 @@ export const MobileContentDrop = () => {
         />
       </M.SubToggleIcon>
       {mobileDropdown === 'calculator' && (
-        <MobileCalcDropdown></MobileCalcDropdown>
+        <MobileDropdown items={DropdownComponents[mobileDropdown]} />
       )}
 
       <M.SubToggleIcon
@@ -56,7 +94,9 @@ export const MobileContentDrop = () => {
         />
       </M.SubToggleIcon>
       {mobileDropdown === 'introduction' && (
-        <MobileIntroDropdown></MobileIntroDropdown>
+        <MobileDropdown
+          items={DropdownComponents[mobileDropdown]}
+        ></MobileDropdown>
       )}
       <M.SubToggleIcon
         onClick={() => {
@@ -72,7 +112,9 @@ export const MobileContentDrop = () => {
         />
       </M.SubToggleIcon>
       {mobileDropdown === 'board' && (
-        <MobileBoardDropdown></MobileBoardDropdown>
+        <MobileDropdown
+          items={DropdownComponents[mobileDropdown]}
+        ></MobileDropdown>
       )}
     </>
   );
