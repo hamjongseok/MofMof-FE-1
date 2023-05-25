@@ -14,36 +14,40 @@ const fadeInDown = keyframes`
 export const MainDropdownWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   position: absolute;
-  width: ${(props) => props.theme.sizes.dropdown};
-  height: auto;
-  padding: 20px 16px 16px; //theme추가 여부 확인
+  width: 318.75px;
+  height: 272px;
+  padding: 32px 30px 16px; //theme추가 여부 확인
   border-radius: ${(props) => props.theme.borderRadius.md};
-  top: 50px;
+  top: 77px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   opacity: 0;
   animation: ${fadeInDown} 0.2s ease-in-out forwards;
 `;
 
 export const DropContentsWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.primary};
   width: auto;
   height: auto;
   text-align: left;
 `;
 
-export const ContentTitle = styled.span`
-  font-size: 15px;
-  color: ${(props) => props.theme.colors.gray200};
-  font-weight: 400;
-  margin: 0 0 6px 10px;
+export const ContentTitle = styled.h3`
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.primaryColor};
+  font-weight: 700;
+  margin: 0;
+  display: flex;
 `;
 
 export const ContentWrapper = styled.ul`
+  margin-top: 30px;
   width: auto;
   height: auto;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `;
 
 export const ContentLi = styled.li`
@@ -52,20 +56,25 @@ export const ContentLi = styled.li`
   flex-direction: row;
   width: ${(props) => props.theme.sizes.xs};
   height: auto;
-  padding: 0;
+  padding: 13.6px 23.8px;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
   position: relative;
+  border: 0.3px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
   &:hover {
-    background-color: ${(props) => props.theme.colors.gray100};
+    background-color: #e3e3e5;
   }
   &:hover > div {
     visibility: visible;
   }
 `;
 
-export const IconWrapper = styled.div`
-  visibility: hidden;
-  position: absolute;
-  left: 220px;
+export const Content = styled.span`
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
 `;
+
+export const IconWrapper = styled.div``;

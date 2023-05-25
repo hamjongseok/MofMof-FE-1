@@ -5,13 +5,10 @@ import Image from 'next/image';
 export const HeaderCalcDropdown = ({
   onMouseEnter,
   onMouseLeave,
-  onFocus,
-}: // onBlur,
-{
+}: {
   onMouseEnter: () => void;
   onMouseLeave: () => void;
   onFocus: () => void;
-  // onBlur: () => void;
 }) => {
   return (
     <>

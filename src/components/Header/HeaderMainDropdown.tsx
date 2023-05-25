@@ -16,70 +16,70 @@ export const HeaderMainDropdown = ({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <M.DropContentsWrapper>
-          <M.ContentTitle>Geacko</M.ContentTitle>
-          <M.ContentWrapper>
-            <Link href={'/Fattail'} legacyBehavior>
-              <M.ContentLi>
+        <M.ContentTitle>Geacko</M.ContentTitle>
+        {/* <M.DropContentsWrapper> */}
+        <M.ContentWrapper>
+          <Link href={'/Fattail'} legacyBehavior>
+            <M.ContentLi>
+              <Image
+                src={'/마우스호버-03.svg'}
+                alt="헤더 로고"
+                width={70}
+                height={44}
+              ></Image>
+              <span>Fattail Gecko</span>
+              <M.IconWrapper>
                 <Image
-                  src={'/마우스호버-03.svg'}
-                  alt="헤더 로고"
-                  width={70}
-                  height={44}
+                  src={'/ArrowCircleRight.svg'}
+                  alt="페이지 이동화살표"
+                  width={45}
+                  height={30}
                 ></Image>
-                <span>Fattail Gecko</span>
-                <M.IconWrapper>
-                  <Image
-                    src={'/ArrowCircleRight.svg'}
-                    alt="페이지 이동화살표"
-                    width={45}
-                    height={30}
-                  ></Image>
-                </M.IconWrapper>
-              </M.ContentLi>
-            </Link>
+              </M.IconWrapper>
+            </M.ContentLi>
+          </Link>
 
-            <Link href={'/'} legacyBehavior>
-              <M.ContentLi>
+          <Link href={'/'} legacyBehavior>
+            <M.ContentLi>
+              <Image
+                src={'/마우스호버-03.svg'}
+                alt="헤더 로고"
+                width={70}
+                height={44}
+              ></Image>
+              <span>Creasted Gecko</span>
+              <M.IconWrapper>
                 <Image
-                  src={'/마우스호버-03.svg'}
-                  alt="헤더 로고"
-                  width={70}
-                  height={44}
+                  src={'/ArrowCircleRight.svg'}
+                  alt="페이지 이동화살표"
+                  width={45}
+                  height={30}
                 ></Image>
-                <span>Creasted Gecko</span>
-                <M.IconWrapper>
-                  <Image
-                    src={'/ArrowCircleRight.svg'}
-                    alt="페이지 이동화살표"
-                    width={45}
-                    height={30}
-                  ></Image>
-                </M.IconWrapper>
-              </M.ContentLi>
-            </Link>
+              </M.IconWrapper>
+            </M.ContentLi>
+          </Link>
 
-            <Link href={'/'} legacyBehavior>
-              <M.ContentLi>
+          <Link href={'/'} legacyBehavior>
+            <M.ContentLi>
+              <Image
+                src={'/마우스호버-03.svg'}
+                alt="헤더 로고"
+                width={70}
+                height={44}
+              ></Image>
+              <span>Leopard Gecko</span>
+              <M.IconWrapper>
                 <Image
-                  src={'/마우스호버-03.svg'}
-                  alt="헤더 로고"
-                  width={70}
-                  height={44}
+                  src={'/ArrowCircleRight.svg'}
+                  alt="페이지 이동화살표"
+                  width={45}
+                  height={30}
                 ></Image>
-                <span>Leopard Gecko</span>
-                <M.IconWrapper>
-                  <Image
-                    src={'/ArrowCircleRight.svg'}
-                    alt="페이지 이동화살표"
-                    width={45}
-                    height={30}
-                  ></Image>
-                </M.IconWrapper>
-              </M.ContentLi>
-            </Link>
-          </M.ContentWrapper>
-        </M.DropContentsWrapper>
+              </M.IconWrapper>
+            </M.ContentLi>
+          </Link>
+        </M.ContentWrapper>
+        {/* </M.DropContentsWrapper> */}
       </M.MainDropdownWrapper>
     </>
   );
