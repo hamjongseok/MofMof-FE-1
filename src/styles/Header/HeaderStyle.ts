@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   padding: 30px;
-  height: 64px;
+  height: 85px;
   justify-content: space-between;
   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   position: relative; // 추가된 코드
@@ -51,34 +51,23 @@ export const LoginBox = styled.div`
   align-items: center;
 `;
 
-export const HeaderReptileIcon = styled.button`
-  border: none;
-  background: none;
-  cursor: pointer;
-  width: 60px;
-  height: 50px;
-  background-image: url('/마우스호버-03.svg');
-  background-size: cover;
-
-  &:hover {
-    background-image: url('/마우스호버 주황-04.svg');
-  }
-`;
-
 export const SubNavCon = styled.ul`
   display: flex;
   gap: 40px;
   align-items: center;
 `;
 
-export const SubNavList = styled.li`
-  height: 10px;
-  font-weight: 500;
+export const SubNavLi = styled.li`
+  list-style: none;
+`;
+
+export const SubNavButton = styled.button`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-style: none;
+  font-weight: 500;
+  background-color: transparent;
+  font-size: 15px;
   cursor: pointer;
-  padding: 10;
 
   & > img {
     margin-left: 10px; // 아이콘의 왼쪽 여백을 조절합니다.
