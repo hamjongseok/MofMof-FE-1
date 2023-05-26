@@ -11,14 +11,15 @@ const fadeInDown = keyframes`
   }
 `;
 
-export const MainDropdownWrapper = styled.div`
+export const SubDropdownWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   position: absolute;
   width: 318.75px;
   height: 272px;
   padding: 32px 30px 16px; //theme추가 여부 확인
   border-radius: ${(props) => props.theme.borderRadius.md};
-  top: 77px;
+  top: 0;
+  left: 257px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
@@ -26,22 +27,33 @@ export const MainDropdownWrapper = styled.div`
   animation: ${fadeInDown} 0.2s ease-in-out forwards;
 `;
 
-export const DropContentsWrapper = styled.div`
-  width: auto;
-  height: auto;
-  text-align: left;
-`;
-
-export const ContentTitle = styled.h3`
-  font-size: 20px;
-  color: ${(props) => props.theme.colors.primaryColor};
-  font-weight: 700;
-  margin: 0;
+export const DoubleSubDropdownWrapper = styled.div`
+  background-color: ${(props) => props.theme.colors.white};
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  padding: 20px; //theme추가 여부 확인
+  border-radius: ${(props) => props.theme.borderRadius.md};
+  top: 0;
+  left: 257px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
   display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: ${fadeInDown} 0.2s ease-in-out forwards;
 `;
 
 export const ContentWrapper = styled.ul`
   margin-top: 30px;
+  width: auto;
+  height: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
+export const DoubleContentWrapper = styled.ul`
   width: auto;
   height: auto;
   padding: 0;
@@ -78,13 +90,3 @@ export const Content = styled.span`
 `;
 
 export const IconWrapper = styled.div``;
-
-export const HeaderSubDropdownCon = styled.div`
-  padding: 30px;
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  position: absolute;
-  left: 270px;
-  top: 50px;
-`;

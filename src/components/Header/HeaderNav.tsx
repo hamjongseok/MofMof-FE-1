@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import {HeaderDropdown} from './HeaderDropdown';
 import * as M from '@/styles/Header/HeaderNavStyle';
+import {HeaderBoardDrop} from './HeaderBoardDrop';
 
 const DropdownComponents = {
   main: {
@@ -85,12 +86,18 @@ export const HeaderNav: React.FC<NavProps> = ({
           </>
         )}
       </M.HeaderNavCon>
-      {variant === isActiveDrop && (
-        <HeaderDropdown
-          {...DropdownComponents[variant]}
-          setIsActiveDrop={setIsActiveDrop}
-        />
-      )}
+      {variant === isActiveDrop &&
+        (variant === '게시판' ? (
+          <HeaderBoardDrop
+            {...DropdownComponents[variant]}
+            setIsActiveDrop={setIsActiveDrop}
+          />
+        ) : (
+          <HeaderDropdown
+            {...DropdownComponents[variant]}
+            setIsActiveDrop={setIsActiveDrop}
+          />
+        ))}
     </>
   );
 };
