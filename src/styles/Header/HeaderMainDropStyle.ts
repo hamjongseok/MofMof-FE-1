@@ -12,11 +12,12 @@ const fadeInDown = keyframes`
 `;
 
 export const MainDropdownWrapper = styled.div`
+  z-index: 1000;
   background-color: ${(props) => props.theme.colors.white};
   position: absolute;
   width: 318.75px;
   height: 272px;
-  padding: 32px 30px 16px; //theme추가 여부 확인
+  padding: 32px 30px 16px;
   border-radius: ${(props) => props.theme.borderRadius.md};
   top: 77px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
