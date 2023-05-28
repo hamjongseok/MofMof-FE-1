@@ -24,7 +24,7 @@ const Slider = () => {
   const items: itemsProps[] = [
     {
       id: 1,
-      item: '/images/Geacko1.png',
+      item: '/images/Gecko1.png',
       name: 'image01',
     },
     {
@@ -34,12 +34,12 @@ const Slider = () => {
     },
     {
       id: 3,
-      item: '/svg/Gecko3.png',
+      item: '/images/Gecko3.png',
       name: 'image03',
     },
     {
       id: 4,
-      item: '/svg/Gecko4.png',
+      item: '/images/Gecko4.png',
       name: 'image04',
     },
   ];
