@@ -6,6 +6,7 @@ export const StyledRoot = styled.div`
   align-items: center;
   margin-top: ${(props) => props.theme.spacing.xl};
   height: 50vh;
+  margin-top: 85px;
   .swiper {
     width: 90%;
     height: 100%;

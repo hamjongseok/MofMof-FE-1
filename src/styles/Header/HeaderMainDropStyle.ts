@@ -13,14 +13,14 @@ const fadeInDown = keyframes`
 
 export const MainDropdownWrapper = styled.div`
   z-index: 1000;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
-  width: 318.75px;
+  width: 300px;
   height: 272px;
-  padding: 32px 30px 16px;
+  /* padding: 32px 30px 16px; */
   border-radius: ${(props) => props.theme.borderRadius.md};
   top: 77px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
+  /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04); */
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -34,38 +34,47 @@ export const DropContentsWrapper = styled.div`
 `;
 
 export const ContentTitle = styled.h3`
-  font-size: 20px;
+  font-size: 18px;
+  border: 2px solid ${(props) => props.theme.colors.primaryColor};
   color: ${(props) => props.theme.colors.primaryColor};
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
   display: flex;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 15px;
 `;
 
 export const ContentWrapper = styled.ul`
-  margin-top: 30px;
-  width: auto;
+  margin-top: 10px;
+  width: 300px;
   height: auto;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  border: 0.5px solid #000000;
+  background-color: #fff;
+  border-radius: 15px;
 `;
 
 export const ContentLi = styled.li`
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  width: ${(props) => props.theme.sizes.xs};
+  width: 300px;
   height: auto;
   padding: 13.6px 23.8px;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border: 0.3px solid #000;
+  /* border: 0.3px solid #000; */
   border-radius: 3px;
   cursor: pointer;
   &:hover {
     background-color: #e3e3e5;
+    border-radius: 14px;
   }
   &:hover > div {
     visibility: visible;

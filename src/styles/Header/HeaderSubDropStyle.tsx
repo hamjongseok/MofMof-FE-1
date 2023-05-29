@@ -30,12 +30,12 @@ export const SubDropdownWrapper = styled.div`
 export const DoubleSubDropdownWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   position: absolute;
-  width: 300px;
-  height: 200px;
-  padding: 20px; //theme추가 여부 확인
+  /* width: 300px; */
+  /* height: 200px; */
+  /* padding: 20px; //theme추가 여부 확인 */
   border-radius: ${(props) => props.theme.borderRadius.md};
   top: 0;
-  left: 257px;
+  left: 301px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.08), 0 0 12px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@ export const ContentLi = styled.li`
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border: 0.3px solid #000;
+  /* border: 0.3px solid #000; */
   border-radius: 3px;
   cursor: pointer;
   &:hover {

@@ -37,7 +37,7 @@ export const HeaderNavCon = styled.nav`
 
 export const LogoBox = styled.div`
   display: flex;
-  padding-right: 24px;
+  padding-right: 50px;
   height: 50px;
   align-items: center;
   cursor: pointer;

@@ -60,12 +60,8 @@ export const HeaderNav: React.FC<NavProps> = ({
           <>
             {/* <M.HeaderReptileIcon></M.HeaderReptileIcon> */}
             <Image
-              src={
-                isActiveDrop === variant
-                  ? '/마우스호버 주황-04.svg'
-                  : '/마우스호버-03.svg'
-              }
-              width={60}
+              src={isActiveDrop === variant ? '/주황로고.svg' : '/흑백로고.svg'}
+              width={35}
               height={60}
               alt="메인 로고 아이콘"
             ></Image>

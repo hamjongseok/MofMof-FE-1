@@ -1,9 +1,7 @@
+import BaseLayout from '@/components/Layout';
+
 const FattailMain = () => {
-  return (
-    <div>
-      <p>Fattail Main</p>
-    </div>
-  );
+  return <BaseLayout></BaseLayout>;
 };
 
 export default FattailMain;
