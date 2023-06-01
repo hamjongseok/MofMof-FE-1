@@ -2,15 +2,16 @@ import styled from 'styled-components';
 import {media} from '../theme';
 
 export const HeaderWrapper = styled.header`
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: #fff;
   display: flex;
   align-items: center;
   padding: 30px;
   height: 85px;
+  width: 100%;
   justify-content: space-between;
   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
-  position: relative; // 추가된 코드
-
+  position: fixed;
+  z-index: 999;
   /* border-bottom: 1px solid #000; */
   @media (max-width: 768px) {
     padding: 0 20px 0 20px;

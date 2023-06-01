@@ -7,7 +7,7 @@ const DropdownComponents = {
   main: {
     title: 'Reptile',
     items: [
-      {LinkURL: '/fattail', ContentName: '펫테일 게코'},
+      {LinkURL: '/FattailMainHome', ContentName: '펫테일 게코'},
       {LinkURL: '/', ContentName: '크레스티드 게코'},
       {LinkURL: '/', ContentName: '레오파드 게코'},
     ],
@@ -23,7 +23,10 @@ const DropdownComponents = {
   모프소개: {
     title: 'Intro',
     items: [
-      {LinkURL: '/', ContentName: '펫테일 게코'},
+      {
+        LinkURL: '/FattailMainHome/FattailMorphIntro',
+        ContentName: '펫테일 게코',
+      },
       {LinkURL: '/', ContentName: '크레스티드 게코'},
       {LinkURL: '/', ContentName: '레오파드 게코'},
     ],
@@ -58,7 +61,6 @@ export const HeaderNav: React.FC<NavProps> = ({
       <M.HeaderNavCon onClick={HandleClickNav}>
         {variant === 'main' ? (
           <>
-            {/* <M.HeaderReptileIcon></M.HeaderReptileIcon> */}
             <Image
               src={isActiveDrop === variant ? '/주황로고.svg' : '/흑백로고.svg'}
               width={35}
