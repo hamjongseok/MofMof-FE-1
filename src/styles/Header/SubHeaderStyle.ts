@@ -5,6 +5,7 @@ export const SubHeaderWrapper = styled.div`
   width: auto;
   height: auto;
   background-color: ${(props) => props.theme.colors.white};
+  align-items: center;
 `;
 
 export const SubHeaderTitle = styled.h1`
